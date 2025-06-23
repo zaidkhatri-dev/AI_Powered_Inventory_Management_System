@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Inventory Management</title>
+  <link rel="stylesheet" href="/css/product-list.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Dashboard</h2>
+    <a href="/dashboard/productlist" id="link-productlist">Product List</a>
+    <a href="/dashboard/analysis" id="link-analysis">Analysis</a>
+    <a href="/dashboard/alerts" id="link-alerts">Notifications</a>
+    <a href="/dashboard/invoice" id="link-invoice">Invoice</a>
+    <a href="/dashboard/accounts" id="link-accounts">Accounts</a>
+  </div>
+
+  <div class="main-content">
+    <h1>Product List</h1>
+    <p>Welcome to your product management dashboard. Here you can add, edit, and categorize products with ease.</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% locals.all.forEach(prod => { %>
+          <tr> 
+            <td><%= prod.name %></td>
+            <td><%= prod.category %></td>
+            <td><%= prod.price %></td>
+            <td><%= prod.quantity %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <button class="edit-btn"><a href="/dashboard/productlist/form"><i class="fa-solid fa-pen"></i></a></button>
+    <button class="edit-btn"><a href="/dashboard/productlist/form/delete"><i class="fa-solid fa-trash"></i></a></button>
+    <button class="edit-btn"><a href="/dashboard/productlist/detect"><i class="fa-solid fa-camera"></i></a></button>
+  </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Inventory Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/analysis.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Dashboard</h2>
+    <a href="/dashboard/productlist" id="link-productlist">Product List</a>
+    <a href="/dashboard/analysis" id="link-analysis" class="active">Analysis</a>
+    <a href="/dashboard/alerts" id="link-alerts">Notifications</a>
+    <a href="/dashboard/invoice" id="link-invoice">Invoice</a>
+    <a href="/dashboard/accounts" id="link-accounts">Accounts</a>
+  </div>
+
+  <div class="main-content">
+    <h1>Sales Overview</h1>
+    <p>Track overall product value in stock over categories to understand trends.</p>
+
+    <div style="max-width: 800px; margin-top: 40px;">
+      <canvas id="salesChart"></canvas>
+    </div>
+  </div>
+
+  <div id="category" hidden>
+    <%= category %>
+  </div>
+
+  <div id="stock" hidden>
+    <%= stock %>
+  </div>
+
+  <script>
+    const category = document.getElementById('category').innerText.split(',');
+    const stock = document.getElementById('stock').innerText.split(',');
+  
+    const ctx = document.getElementById('salesChart').getContext('2d');
+  
+    const salesChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: category,
+        datasets: [{
+          label: 'Total Value ($)',
+          data: stock,
+          fill: false,
+          borderColor: '#111827',
+          tension: 0.4,
+          pointBackgroundColor: '#111827',
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              stepSize: 2000
+            }
+          }
+        }
+      }
+    });
+  </script>
+  
+</body>
+</html>

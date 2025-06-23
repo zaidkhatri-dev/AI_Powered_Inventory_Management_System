@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup</title>
+  <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Form</h2>
+    <form action="/dashboard/productlist/form/delete" method="post">
+      <div class="form-group">
+        <label for="firstname">Name</label>
+        <input type="text" id="firstname" name="name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="lastname">Category</label>
+        <input type="text" id="lastname" name="category" required />
+      </div>
+
+      
+      <% if (locals.error) { %>
+        <div class="err">
+          <p><%= locals.error %></p>
+        </div>
+      <% } %>
+
+      <button type="submit" class="signup-btn">Submit</button>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - Inventory Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/accounts.css">
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Dashboard</h2>
+    <a href="/dashboard/productlist" id="link-productlist">Product List</a>
+    <a href="/dashboard/analysis" id="link-analysis">Analysis</a>
+    <a href="/dashboard/alerts" id="link-alerts">Notifications</a>
+    <a href="/dashboard/invoice" id="link-invoice">Invoice</a>
+    <a href="/dashboard/accounts" id="link-accounts">Accounts</a>
+  </div>
+
+  <div class="main-content">
+    <h1>Account Details</h1>
+    <p>Manage your account settings and personal information.</p>
+
+    <div class="account-box">
+      <p><strong>First Name:</strong> <%= firstname %></p>
+      <p><strong>Last Name:</strong> <%= lastname %></p>
+      <p><strong>Email:</strong> <%= email %></p>
+      <form action="/dashboard/accounts" method="POST">
+        <button type="submit" class="logout-button">Logout</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
