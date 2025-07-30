@@ -32,8 +32,6 @@ coverage/
 # Optional eslint cache
 .eslintcache
 
-# TypeScript cache (if using TS)
-*.tsbuildinfo
 
 # IDEs and editors
 .vscode/
