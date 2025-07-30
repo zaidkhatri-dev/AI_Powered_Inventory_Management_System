@@ -1,7 +1,0 @@
-Invoice
-Customer Name: Zaid Khatri
-Invoice Date: 2025-04-17
-Product: redmi note 10
-Quantity: 1
-Unit Price: 200
-Additional Notes: none

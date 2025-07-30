@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%- include('./partials/head.ejs') %>
   <title>Dashboard - Inventory Management</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/analysis.css">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Dashboard</h2>
-    <a href="/dashboard/productlist" id="link-productlist">Product List</a>
-    <a href="/dashboard/analysis" id="link-analysis" class="active">Analysis</a>
-    <a href="/dashboard/alerts" id="link-alerts">Notifications</a>
-    <a href="/dashboard/invoice" id="link-invoice">Invoice</a>
-    <a href="/dashboard/accounts" id="link-accounts">Accounts</a>
-  </div>
+  <%- include('./partials/sidebar.ejs') %>
 
   <div class="main-content">
     <h1>Sales Overview</h1>

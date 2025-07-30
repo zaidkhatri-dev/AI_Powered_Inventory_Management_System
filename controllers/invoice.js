@@ -1,7 +1,4 @@
 const PDFDocument = require('pdfkit');
-const fs = require('fs');
-const path = require('path');
-const getStream = require('get-stream');
 
 async function generateInvoice(req,res) {
     const data = req.body;

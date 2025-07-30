@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <%- include('./partials/head.ejs') %>
   <title>Dashboard - Inventory Management</title>
   <link rel="stylesheet" href="/css/product-list.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 <body>
-  <div class="sidebar">
-    <h2>Dashboard</h2>
-    <a href="/dashboard/productlist" id="link-productlist">Product List</a>
-    <a href="/dashboard/analysis" id="link-analysis">Analysis</a>
-    <a href="/dashboard/alerts" id="link-alerts">Notifications</a>
-    <a href="/dashboard/invoice" id="link-invoice">Invoice</a>
-    <a href="/dashboard/accounts" id="link-accounts">Accounts</a>
-  </div>
+  <%- include('./partials/sidebar.ejs') %>
 
   <div class="main-content">
     <h1>Product List</h1>
