@@ -31,7 +31,7 @@ cd AI_Powered_Inventory_Management_System
 npm install
 ```
 
-### 3. Create .env file and write 'GEMINI_API_KEY=\<your api key\>'
+### 3. Create .env file and write 'GEMINI_API_KEY=\<your api key\>
 
 ### 4. Run the server
 
