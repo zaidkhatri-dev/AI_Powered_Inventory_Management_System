@@ -34,7 +34,7 @@ npm install
 ### 3. Create .env file and write
 
 ```bash
-GEMINI_API_KEY=\<your api key\>
+GEMINI_API_KEY=<your api key>
 ```
 
 ### 4. Run the server
